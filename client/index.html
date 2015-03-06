@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation for Apps</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </head>
+  <body>
+    <zf-offcanvas id="menu" position="left">
+      <a zf-close="" class="close-button">×</a>
+      <ul class="menu no-bullet">
+          <li><a><strong><img src="assets/img/threeesitelarge.png" alt=""></strong></a></li>
+          <li><a ui-sref="feed">
+            <img zf-iconic="" icon="comment-square" size="medium">Feed</a></li>
+          <li><a ui-sref="userProfile">
+            <img zf-iconic="" icon="person" size="medium">User Profile</a></li>
+          <li><a ui-sref="books">
+            <img zf-iconic="" icon="document" size="medium">Books</a></li>
+          <li><a ui-sref="explore">
+            <img zf-iconic="" icon="magnifying-glass" size="medium">Explore</a></li>
+        </ul>
+    </zf-offcanvas>
+    <a zf-open="menu" class="button threee-menu"> <img zf-iconic="" icon="chevron" size="medium"></a>
+    <div class="grid-frame vertical">
+     
+      <div class="grid-content">
+        <!-- <div class="grid-container view"> -->
+          <div ng-class="['ui-animation']" ui-view></div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </body>
+</html>
