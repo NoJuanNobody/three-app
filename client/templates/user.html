@@ -3,21 +3,26 @@ name: userProfile
 url: /userProfile
 title: this is profile page
 ---
+<div zf-panel="" id="panel">
+			<a zf-close="" class="close-button">×</a>
+			<p>This is a basic panel.</p>
+		</div>
 <div class="grid-frame grid-container" ng-controller="profileController as profile">
 		
 			<div class="grid-block large-4" >
 				<div class="grid-block"> 
 					<div class="grid-content left">
 					    <img ng-src="{{profile.account.profileImage}}" alt="">
-					    <h1 class="left">{{profile.account.name}}</h1>
+					    <a href="#"><h1 class="left">{{profile.account.name}}</h1></a>
 					    <p class="left">{{profile.account.description}}</p>
 				  	</div>
 				  	<div class="grid-content">
-					    <section class="block-list left">
+					    <section class="custom-block-list left">
 							<header>BOOKS</header>
-							<ul >>
-						 
-								<li class="with-chevron" ng-repeat="books in profile.books"><a href="#">{{books.name}}</a></li>
+							<ul>
+								<li class="with-chevron" ng-repeat="books in profile.books"><a zf-open="panel" href="#">{{books.name}}</a>
+								
+								</li>
 							</ul>
 						</section>
 					</div>
@@ -28,9 +33,9 @@ title: this is profile page
 		<div class="grid-container large-10" ng-controller="profileController as profile">
 		<div class="grid-block small-12 medium-12 large-12" ng-repeat="post in profile.posts">
 			<div class="grid-content">
-			    <div class="card">
+			    <div class="custom-card">
 			      <img class="content" ng-src="{{post.images.content}}" />
-			      <div class="card-divider">
+			      <div class="custom-card-divider">
 			        {{post.name}}
 			      </div>
 			      <div class="card-section">
@@ -48,6 +53,7 @@ title: this is profile page
 		    </div>
 		  </div>
 		</div>
+		
 	</div>
 	</div>	
 </div>
