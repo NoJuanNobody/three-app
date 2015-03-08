@@ -254,15 +254,26 @@ app.controller('profileController',function(){
 var books = 
   [
     {
-      name: "book one"
+      name: "festival",
+      date: "july 2014",
+      description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia cum explicabo minus similique non iste magni vel, consectetur quaerat nihil quidem, ad maiores excepturi, facere quibusdam. Ab minus dicta modi!", 
     },
     {
-      name: "book two"
+      name: "event",
+      date: "january 2015",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, repudiandae fuga quaerat ut porro! Ratione incidunt esse minus dicta sint, non vel ab enim quis omnis, repellat voluptate expedita doloribus?",
     },
     {
-      name: "book three"
+      name: "catalogue",
+      date: "february 2015",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quam modi accusantium. Minus aperiam laborum, nesciunt doloribus quis dolore, consequatur, id, iste voluptatem fugiat non! Atque quae, voluptatibus aliquid ratione?",
     },
-  ] 
+    {
+      name: "book four",
+      data: "juy, 2014", 
+      description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, magnam, quidem! Nemo totam delectus repellat deleniti sit quisquam explicabo accusantium, pariatur sed veniam? Aperiam, itaque, perspiciatis. Quas, temporibus, odio! President?",
+    },
+  ]; 
 var userAccount=
   {
     name: "user account",
