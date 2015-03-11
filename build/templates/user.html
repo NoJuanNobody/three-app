@@ -1,0 +1,54 @@
+<div zf-panel="" id="panel">
+			<a zf-close="" class="close-button">×</a>
+			<p>This is a basic panel.</p>
+		</div>
+<div class="grid-frame grid-container" ng-controller="profileController as profile">
+		
+			<div class="grid-block large-4" >
+				<div class="grid-block"> 
+					<div class="grid-content left">
+					    <img ng-src="{{profile.account.profileImage}}" alt="">
+					    <a href="#"><h1 class="left">{{profile.account.name}}</h1></a>
+					    <p class="left">{{profile.account.description}}</p>
+				  	</div>
+				  	<div class="grid-content">
+					    <section class="custom-block-list left">
+							<header>BOOKS</header>
+							<ul>
+								<li class="with-chevron" ng-repeat="books in profile.books"><a zf-open="panel" href="#">{{books.name}}</a>
+								
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		
+		<div class="grid-content center">
+		<div class="grid-container large-10" ng-controller="profileController as profile">
+		<div class="grid-block small-12 medium-12 large-12" ng-repeat="post in profile.posts">
+			<div class="grid-content">
+			    <div class="custom-card">
+			      <img class="content" ng-src="{{post.images.content}}" />
+			      <div class="custom-card-divider">
+			        {{post.name}}
+			      </div>
+			      <div class="card-section">
+			      	<img class="profile" ng-src="{{post.images.profile}}" alt="">
+			        <p>{{post.description}}</p>
+			        <a zf-open="{{post.id}}" class="button"><img zf-iconic="" icon="share-boxed" size="medium"></a>
+					<div zf-modal="" id="{{post.id}}">
+					<a zf-close="" class="close-button">×</a>
+					<img class="" ng-src="{{post.images.content}}" />
+					<img class="profile" ng-src="{{post.images.profile}}" alt="">
+					<h3>{{post.name}},{{post.date}}</h3>
+					<p>{{post.description}}</p>
+					</div>
+			      </div>    
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+	</div>	
+</div>

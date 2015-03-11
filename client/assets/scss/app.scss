@@ -72,6 +72,15 @@ p, section{
 		padding-left: 20px;
 	}
 }
+.box{
+	padding:20px;
+	margin-top: 100px;
+	border: 1px solid $electric-green;
+	border-radius:4px;
+}
+.no-padding{
+	padding: 0px;
+}
 // This is the block list container
 .custom-block-list {
 // This gets you basic styles
@@ -155,6 +164,35 @@ $padding: 1rem
 // This is a card section
 .custom-card-section {
 @include card-section(
+$padding: 1rem
+);
+}
+.custom-button {
+// Extend the base selector to get core styles
+@extend %button;
+// Use the size mixin to set a size
+@include button-size(
+$size: medium, // tiny, small, medium, or large
+$expand: false
+);
+// Use the style mixin to set visual styles
+@include button-style(
+$background: $green-brown, // Background color
+$color: white, // Text color
+$style: solid // Can be solid or hollow
+);
+&.custom-disabled {
+@include button-disabled;
+}
+}
+.custom-title-bar {
+// Extend the base selector to get core structural styles
+@extend %title-bar;
+// Add visual styles with this mixin
+@include title-bar-style(
+$background: $green-brown, // Background color
+$color: white, // Text color
+$border: 1px solid #green-brown,
 $padding: 1rem
 );
 }

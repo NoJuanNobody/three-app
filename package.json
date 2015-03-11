@@ -19,5 +19,8 @@
     "run-sequence": "^1.0.2",
     "through2": "^0.6.3"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "foundation-apps": "^1.0.3"
+  }
 }
