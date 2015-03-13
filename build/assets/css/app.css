@@ -400,7 +400,7 @@ img {
   display: inline-block;
   vertical-align: middle; }
 
-a, [ui-sref] {
+a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
   cursor: pointer; }
 
 #map_canvas img,
@@ -486,7 +486,7 @@ a, [ui-sref] {
 .action-sheet-container {
   position: relative;
   display: inline-block; }
-  .action-sheet-container .button, .action-sheet-container button {
+  .action-sheet-container .button {
     margin-left: 0;
     margin-right: 0; }
 
@@ -911,7 +911,7 @@ a, [ui-sref] {
         margin-left: 0.8rem;
         float: none; }
 
-.button, button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .custom-button {
+.button, .button-group > li > a, .button-group > li > label, .button-group > li > button, .custom-button {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -926,296 +926,270 @@ a, [ui-sref] {
   font-size: 0.9rem;
   border-radius: 0; }
 
-.button, button {
+.button {
   font-size: 0.9rem;
   display: inline-block;
+  width: auto;
   margin: 0 1rem 1rem 0;
   background: white;
   color: #000; }
-  .button .iconic, button .iconic {
+  .button .iconic {
     width: 1em;
     height: 1em;
     vertical-align: middle;
     margin-right: 0.25em;
     margin-top: -2px; }
-  .button:hover, button:hover, .button:focus, button:focus {
+  .button:hover, .button:focus {
     background: #d9d9d9;
     color: #000; }
-  .button[data-popup-toggle]::after, button[data-popup-toggle]::after {
-    border-top-color: #000; }
-  .button .iconic *, button .iconic * {
+  .button .iconic * {
     fill: #000;
     stroke: #000; }
-    .button .iconic *.iconic-property-accent, button .iconic *.iconic-property-accent {
+    .button .iconic *.iconic-property-accent {
       fill: #000;
       stroke: #000; }
-  .button.tiny, button.tiny {
+  .button.tiny {
     font-size: 0.63rem; }
-    .button.tiny .iconic, button.tiny .iconic {
+    .button.tiny .iconic {
       width: 1em;
       height: 1em;
       vertical-align: middle;
       margin-right: 0.25em;
       margin-top: -2px; }
-  .button.small, button.small {
+  .button.small {
     font-size: 0.72rem; }
-    .button.small .iconic, button.small .iconic {
+    .button.small .iconic {
       width: 1em;
       height: 1em;
       vertical-align: middle;
       margin-right: 0.25em;
       margin-top: -2px; }
-  .button.large, button.large {
+  .button.large {
     font-size: 1.17rem; }
-    .button.large .iconic, button.large .iconic {
+    .button.large .iconic {
       width: 1em;
       height: 1em;
       vertical-align: middle;
       margin-right: 0.25em;
       margin-top: -2px; }
-  .button.expand, button.expand {
+  .button.expand {
     display: block;
+    width: 100%;
     margin-left: 0;
     margin-right: 0; }
-  .button.secondary, button.secondary {
+  .button.secondary {
     background: #f1f1f1;
     color: #000; }
-    .button.secondary:hover, button.secondary:hover, .button.secondary:focus, button.secondary:focus {
+    .button.secondary:hover, .button.secondary:focus {
       background: #cdcdcd;
       color: #000; }
-    .button.secondary[data-popup-toggle]::after, button.secondary[data-popup-toggle]::after {
-      border-top-color: #000; }
-    .button.secondary .iconic *, button.secondary .iconic * {
+    .button.secondary .iconic * {
       fill: #000;
       stroke: #000; }
-      .button.secondary .iconic *.iconic-property-accent, button.secondary .iconic *.iconic-property-accent {
+      .button.secondary .iconic *.iconic-property-accent {
         fill: #000;
         stroke: #000; }
-  .button.success, button.success {
+  .button.success {
     background: #43AC6A;
     color: #fff; }
-    .button.success:hover, button.success:hover, .button.success:focus, button.success:focus {
+    .button.success:hover, .button.success:focus {
       background: #39925a;
       color: #fff; }
-    .button.success[data-popup-toggle]::after, button.success[data-popup-toggle]::after {
-      border-top-color: #fff; }
-    .button.success .iconic *, button.success .iconic * {
+    .button.success .iconic * {
       fill: #fff;
       stroke: #fff; }
-      .button.success .iconic *.iconic-property-accent, button.success .iconic *.iconic-property-accent {
+      .button.success .iconic *.iconic-property-accent {
         fill: #fff;
         stroke: #fff; }
-  .button.warning, button.warning {
+  .button.warning {
     background: #F08A24;
     color: #fff; }
-    .button.warning:hover, button.warning:hover, .button.warning:focus, button.warning:focus {
+    .button.warning:hover, .button.warning:focus {
       background: #dc750f;
       color: #fff; }
-    .button.warning[data-popup-toggle]::after, button.warning[data-popup-toggle]::after {
-      border-top-color: #fff; }
-    .button.warning .iconic *, button.warning .iconic * {
+    .button.warning .iconic * {
       fill: #fff;
       stroke: #fff; }
-      .button.warning .iconic *.iconic-property-accent, button.warning .iconic *.iconic-property-accent {
+      .button.warning .iconic *.iconic-property-accent {
         fill: #fff;
         stroke: #fff; }
-  .button.alert, button.alert {
+  .button.alert {
     background: #F04124;
     color: #fff; }
-    .button.alert:hover, button.alert:hover, .button.alert:focus, button.alert:focus {
+    .button.alert:hover, .button.alert:focus {
       background: #dc2c0f;
       color: #fff; }
-    .button.alert[data-popup-toggle]::after, button.alert[data-popup-toggle]::after {
-      border-top-color: #fff; }
-    .button.alert .iconic *, button.alert .iconic * {
+    .button.alert .iconic * {
       fill: #fff;
       stroke: #fff; }
-      .button.alert .iconic *.iconic-property-accent, button.alert .iconic *.iconic-property-accent {
+      .button.alert .iconic *.iconic-property-accent {
         fill: #fff;
         stroke: #fff; }
-  .button.info, button.info {
+  .button.info {
     background: #A0D3E8;
     color: #000; }
-    .button.info:hover, button.info:hover, .button.info:focus, button.info:focus {
+    .button.info:hover, .button.info:focus {
       background: #71bddd;
       color: #000; }
-    .button.info[data-popup-toggle]::after, button.info[data-popup-toggle]::after {
-      border-top-color: #000; }
-    .button.info .iconic *, button.info .iconic * {
+    .button.info .iconic * {
       fill: #000;
       stroke: #000; }
-      .button.info .iconic *.iconic-property-accent, button.info .iconic *.iconic-property-accent {
+      .button.info .iconic *.iconic-property-accent {
         fill: #000;
         stroke: #000; }
-  .button.dark, button.dark {
+  .button.dark {
     background: #232323;
     color: #fff; }
-    .button.dark:hover, button.dark:hover, .button.dark:focus, button.dark:focus {
+    .button.dark:hover, .button.dark:focus {
       background: #1e1e1e;
       color: #fff; }
-    .button.dark[data-popup-toggle]::after, button.dark[data-popup-toggle]::after {
-      border-top-color: #fff; }
-    .button.dark .iconic *, button.dark .iconic * {
+    .button.dark .iconic * {
       fill: #fff;
       stroke: #fff; }
-      .button.dark .iconic *.iconic-property-accent, button.dark .iconic *.iconic-property-accent {
+      .button.dark .iconic *.iconic-property-accent {
         fill: #fff;
         stroke: #fff; }
-  .button.hollow, button.hollow {
+  .button.hollow {
     border: 1px solid white;
     background: transparent;
     color: white; }
-    .button.hollow:hover, button.hollow:hover, .button.hollow:focus, button.hollow:focus {
+    .button.hollow:hover, .button.hollow:focus {
       border-color: white;
       background: transparent;
       color: white; }
-    .button.hollow[data-popup-toggle]::after, button.hollow[data-popup-toggle]::after {
-      border-top-color: white; }
-    .button.hollow .iconic *, button.hollow .iconic * {
+    .button.hollow .iconic * {
       fill: white;
       stroke: white; }
-      .button.hollow .iconic *.iconic-property-accent, button.hollow .iconic *.iconic-property-accent {
+      .button.hollow .iconic *.iconic-property-accent {
         fill: white;
         stroke: white; }
-    .button.hollow:hover .iconic *, button.hollow:hover .iconic * {
+    .button.hollow:hover .iconic * {
       fill: white;
       stroke: white; }
-      .button.hollow:hover .iconic *.iconic-property-accent, button.hollow:hover .iconic *.iconic-property-accent {
+      .button.hollow:hover .iconic *.iconic-property-accent {
         fill: white;
         stroke: white; }
-    .button.hollow.secondary, button.hollow.secondary {
+    .button.hollow.secondary {
       border: 1px solid #f1f1f1;
       background: transparent;
       color: #f1f1f1; }
-      .button.hollow.secondary:hover, button.hollow.secondary:hover, .button.hollow.secondary:focus, button.hollow.secondary:focus {
+      .button.hollow.secondary:hover, .button.hollow.secondary:focus {
         border-color: #f4f4f4;
         background: transparent;
         color: #f4f4f4; }
-      .button.hollow.secondary[data-popup-toggle]::after, button.hollow.secondary[data-popup-toggle]::after {
-        border-top-color: #f1f1f1; }
-      .button.hollow.secondary .iconic *, button.hollow.secondary .iconic * {
+      .button.hollow.secondary .iconic * {
         fill: #f1f1f1;
         stroke: #f1f1f1; }
-        .button.hollow.secondary .iconic *.iconic-property-accent, button.hollow.secondary .iconic *.iconic-property-accent {
+        .button.hollow.secondary .iconic *.iconic-property-accent {
           fill: #f1f1f1;
           stroke: #f1f1f1; }
-      .button.hollow.secondary:hover .iconic *, button.hollow.secondary:hover .iconic * {
+      .button.hollow.secondary:hover .iconic * {
         fill: #f4f4f4;
         stroke: #f4f4f4; }
-        .button.hollow.secondary:hover .iconic *.iconic-property-accent, button.hollow.secondary:hover .iconic *.iconic-property-accent {
+        .button.hollow.secondary:hover .iconic *.iconic-property-accent {
           fill: #f4f4f4;
           stroke: #f4f4f4; }
-    .button.hollow.success, button.hollow.success {
+    .button.hollow.success {
       border: 1px solid #43AC6A;
       background: transparent;
       color: #43AC6A; }
-      .button.hollow.success:hover, button.hollow.success:hover, .button.hollow.success:focus, button.hollow.success:focus {
+      .button.hollow.success:hover, .button.hollow.success:focus {
         border-color: #6dc68e;
         background: transparent;
         color: #6dc68e; }
-      .button.hollow.success[data-popup-toggle]::after, button.hollow.success[data-popup-toggle]::after {
-        border-top-color: #43AC6A; }
-      .button.hollow.success .iconic *, button.hollow.success .iconic * {
+      .button.hollow.success .iconic * {
         fill: #43AC6A;
         stroke: #43AC6A; }
-        .button.hollow.success .iconic *.iconic-property-accent, button.hollow.success .iconic *.iconic-property-accent {
+        .button.hollow.success .iconic *.iconic-property-accent {
           fill: #43AC6A;
           stroke: #43AC6A; }
-      .button.hollow.success:hover .iconic *, button.hollow.success:hover .iconic * {
+      .button.hollow.success:hover .iconic * {
         fill: #6dc68e;
         stroke: #6dc68e; }
-        .button.hollow.success:hover .iconic *.iconic-property-accent, button.hollow.success:hover .iconic *.iconic-property-accent {
+        .button.hollow.success:hover .iconic *.iconic-property-accent {
           fill: #6dc68e;
           stroke: #6dc68e; }
-    .button.hollow.warning, button.hollow.warning {
+    .button.hollow.warning {
       border: 1px solid #F08A24;
       background: transparent;
       color: #F08A24; }
-      .button.hollow.warning:hover, button.hollow.warning:hover, .button.hollow.warning:focus, button.hollow.warning:focus {
+      .button.hollow.warning:hover, .button.hollow.warning:focus {
         border-color: #f4a75b;
         background: transparent;
         color: #f4a75b; }
-      .button.hollow.warning[data-popup-toggle]::after, button.hollow.warning[data-popup-toggle]::after {
-        border-top-color: #F08A24; }
-      .button.hollow.warning .iconic *, button.hollow.warning .iconic * {
+      .button.hollow.warning .iconic * {
         fill: #F08A24;
         stroke: #F08A24; }
-        .button.hollow.warning .iconic *.iconic-property-accent, button.hollow.warning .iconic *.iconic-property-accent {
+        .button.hollow.warning .iconic *.iconic-property-accent {
           fill: #F08A24;
           stroke: #F08A24; }
-      .button.hollow.warning:hover .iconic *, button.hollow.warning:hover .iconic * {
+      .button.hollow.warning:hover .iconic * {
         fill: #f4a75b;
         stroke: #f4a75b; }
-        .button.hollow.warning:hover .iconic *.iconic-property-accent, button.hollow.warning:hover .iconic *.iconic-property-accent {
+        .button.hollow.warning:hover .iconic *.iconic-property-accent {
           fill: #f4a75b;
           stroke: #f4a75b; }
-    .button.hollow.alert, button.hollow.alert {
+    .button.hollow.alert {
       border: 1px solid #F04124;
       background: transparent;
       color: #F04124; }
-      .button.hollow.alert:hover, button.hollow.alert:hover, .button.hollow.alert:focus, button.hollow.alert:focus {
+      .button.hollow.alert:hover, .button.hollow.alert:focus {
         border-color: #f4715b;
         background: transparent;
         color: #f4715b; }
-      .button.hollow.alert[data-popup-toggle]::after, button.hollow.alert[data-popup-toggle]::after {
-        border-top-color: #F04124; }
-      .button.hollow.alert .iconic *, button.hollow.alert .iconic * {
+      .button.hollow.alert .iconic * {
         fill: #F04124;
         stroke: #F04124; }
-        .button.hollow.alert .iconic *.iconic-property-accent, button.hollow.alert .iconic *.iconic-property-accent {
+        .button.hollow.alert .iconic *.iconic-property-accent {
           fill: #F04124;
           stroke: #F04124; }
-      .button.hollow.alert:hover .iconic *, button.hollow.alert:hover .iconic * {
+      .button.hollow.alert:hover .iconic * {
         fill: #f4715b;
         stroke: #f4715b; }
-        .button.hollow.alert:hover .iconic *.iconic-property-accent, button.hollow.alert:hover .iconic *.iconic-property-accent {
+        .button.hollow.alert:hover .iconic *.iconic-property-accent {
           fill: #f4715b;
           stroke: #f4715b; }
-    .button.hollow.info, button.hollow.info {
+    .button.hollow.info {
       border: 1px solid #A0D3E8;
       background: transparent;
       color: #A0D3E8; }
-      .button.hollow.info:hover, button.hollow.info:hover, .button.hollow.info:focus, button.hollow.info:focus {
+      .button.hollow.info:hover, .button.hollow.info:focus {
         border-color: #b8deee;
         background: transparent;
         color: #b8deee; }
-      .button.hollow.info[data-popup-toggle]::after, button.hollow.info[data-popup-toggle]::after {
-        border-top-color: #A0D3E8; }
-      .button.hollow.info .iconic *, button.hollow.info .iconic * {
+      .button.hollow.info .iconic * {
         fill: #A0D3E8;
         stroke: #A0D3E8; }
-        .button.hollow.info .iconic *.iconic-property-accent, button.hollow.info .iconic *.iconic-property-accent {
+        .button.hollow.info .iconic *.iconic-property-accent {
           fill: #A0D3E8;
           stroke: #A0D3E8; }
-      .button.hollow.info:hover .iconic *, button.hollow.info:hover .iconic * {
+      .button.hollow.info:hover .iconic * {
         fill: #b8deee;
         stroke: #b8deee; }
-        .button.hollow.info:hover .iconic *.iconic-property-accent, button.hollow.info:hover .iconic *.iconic-property-accent {
+        .button.hollow.info:hover .iconic *.iconic-property-accent {
           fill: #b8deee;
           stroke: #b8deee; }
-    .button.hollow.dark, button.hollow.dark {
+    .button.hollow.dark {
       border: 1px solid #232323;
       background: transparent;
       color: #232323; }
-      .button.hollow.dark:hover, button.hollow.dark:hover, .button.hollow.dark:focus, button.hollow.dark:focus {
+      .button.hollow.dark:hover, .button.hollow.dark:focus {
         border-color: #5a5a5a;
         background: transparent;
         color: #5a5a5a; }
-      .button.hollow.dark[data-popup-toggle]::after, button.hollow.dark[data-popup-toggle]::after {
-        border-top-color: #232323; }
-      .button.hollow.dark .iconic *, button.hollow.dark .iconic * {
+      .button.hollow.dark .iconic * {
         fill: #232323;
         stroke: #232323; }
-        .button.hollow.dark .iconic *.iconic-property-accent, button.hollow.dark .iconic *.iconic-property-accent {
+        .button.hollow.dark .iconic *.iconic-property-accent {
           fill: #232323;
           stroke: #232323; }
-      .button.hollow.dark:hover .iconic *, button.hollow.dark:hover .iconic * {
+      .button.hollow.dark:hover .iconic * {
         fill: #5a5a5a;
         stroke: #5a5a5a; }
-        .button.hollow.dark:hover .iconic *.iconic-property-accent, button.hollow.dark:hover .iconic *.iconic-property-accent {
+        .button.hollow.dark:hover .iconic *.iconic-property-accent {
           fill: #5a5a5a;
           stroke: #5a5a5a; }
-  .button.disabled, button.disabled {
+  .button.disabled {
     opacity: 0.5;
     cursor: default;
     pointer-events: none; }
@@ -1276,8 +1250,6 @@ a, [ui-sref] {
     .button-group > li > a:hover, .button-group > li > a:focus, .button-group > li > label:hover, .button-group > li > label:focus, .button-group > li > button:hover, .button-group > li > button:focus {
       background: #d9d9d9;
       color: #fff; }
-    .button-group > li > a[data-popup-toggle]::after, .button-group > li > label[data-popup-toggle]::after, .button-group > li > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group > li > a .iconic *, .button-group > li > label .iconic *, .button-group > li > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1288,19 +1260,17 @@ a, [ui-sref] {
     background: #d9d9d9; }
   .button-group.secondary > li > a, .button-group.secondary > li > label, .button-group.secondary > li > button {
     background: #f1f1f1;
-    color: #fff;
+    color: #000;
     border-color: #cdcdcd; }
     .button-group.secondary > li > a:hover, .button-group.secondary > li > a:focus, .button-group.secondary > li > label:hover, .button-group.secondary > li > label:focus, .button-group.secondary > li > button:hover, .button-group.secondary > li > button:focus {
       background: #cdcdcd;
-      color: #fff; }
-    .button-group.secondary > li > a[data-popup-toggle]::after, .button-group.secondary > li > label[data-popup-toggle]::after, .button-group.secondary > li > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
+      color: #000; }
     .button-group.secondary > li > a .iconic *, .button-group.secondary > li > label .iconic *, .button-group.secondary > li > button .iconic * {
-      fill: #fff;
-      stroke: #fff; }
+      fill: #000;
+      stroke: #000; }
       .button-group.secondary > li > a .iconic *.iconic-property-accent, .button-group.secondary > li > label .iconic *.iconic-property-accent, .button-group.secondary > li > button .iconic *.iconic-property-accent {
-        fill: #fff;
-        stroke: #fff; }
+        fill: #000;
+        stroke: #000; }
   .button-group.secondary > li.is-active > a, .button-group.secondary > li.is-active > label, .button-group.secondary > li.is-active > button {
     background: #cdcdcd; }
   .button-group.success > li > a, .button-group.success > li > label, .button-group.success > li > button {
@@ -1310,8 +1280,6 @@ a, [ui-sref] {
     .button-group.success > li > a:hover, .button-group.success > li > a:focus, .button-group.success > li > label:hover, .button-group.success > li > label:focus, .button-group.success > li > button:hover, .button-group.success > li > button:focus {
       background: #39925a;
       color: #fff; }
-    .button-group.success > li > a[data-popup-toggle]::after, .button-group.success > li > label[data-popup-toggle]::after, .button-group.success > li > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group.success > li > a .iconic *, .button-group.success > li > label .iconic *, .button-group.success > li > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1327,8 +1295,6 @@ a, [ui-sref] {
     .button-group.warning > li > a:hover, .button-group.warning > li > a:focus, .button-group.warning > li > label:hover, .button-group.warning > li > label:focus, .button-group.warning > li > button:hover, .button-group.warning > li > button:focus {
       background: #dc750f;
       color: #fff; }
-    .button-group.warning > li > a[data-popup-toggle]::after, .button-group.warning > li > label[data-popup-toggle]::after, .button-group.warning > li > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group.warning > li > a .iconic *, .button-group.warning > li > label .iconic *, .button-group.warning > li > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1344,8 +1310,6 @@ a, [ui-sref] {
     .button-group.alert > li > a:hover, .button-group.alert > li > a:focus, .button-group.alert > li > label:hover, .button-group.alert > li > label:focus, .button-group.alert > li > button:hover, .button-group.alert > li > button:focus {
       background: #dc2c0f;
       color: #fff; }
-    .button-group.alert > li > a[data-popup-toggle]::after, .button-group.alert > li > label[data-popup-toggle]::after, .button-group.alert > li > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group.alert > li > a .iconic *, .button-group.alert > li > label .iconic *, .button-group.alert > li > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1361,8 +1325,6 @@ a, [ui-sref] {
     .button-group > li.secondary > a:hover, .button-group > li.secondary > a:focus, .button-group > li.secondary > label:hover, .button-group > li.secondary > label:focus, .button-group > li.secondary > button:hover, .button-group > li.secondary > button:focus {
       background: #cdcdcd;
       color: #000; }
-    .button-group > li.secondary > a[data-popup-toggle]::after, .button-group > li.secondary > label[data-popup-toggle]::after, .button-group > li.secondary > button[data-popup-toggle]::after {
-      border-top-color: #000; }
     .button-group > li.secondary > a:hover, .button-group > li.secondary > a:focus, .button-group > li.secondary > label:hover, .button-group > li.secondary > label:focus, .button-group > li.secondary > button:hover, .button-group > li.secondary > button:focus {
       border-color: #b5b5b5; }
     .button-group > li.secondary > a .iconic *, .button-group > li.secondary > label .iconic *, .button-group > li.secondary > button .iconic * {
@@ -1378,8 +1340,6 @@ a, [ui-sref] {
     .button-group > li.success > a:hover, .button-group > li.success > a:focus, .button-group > li.success > label:hover, .button-group > li.success > label:focus, .button-group > li.success > button:hover, .button-group > li.success > button:focus {
       background: #39925a;
       color: #fff; }
-    .button-group > li.success > a[data-popup-toggle]::after, .button-group > li.success > label[data-popup-toggle]::after, .button-group > li.success > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group > li.success > a:hover, .button-group > li.success > a:focus, .button-group > li.success > label:hover, .button-group > li.success > label:focus, .button-group > li.success > button:hover, .button-group > li.success > button:focus {
       border-color: #32814f; }
     .button-group > li.success > a .iconic *, .button-group > li.success > label .iconic *, .button-group > li.success > button .iconic * {
@@ -1395,8 +1355,6 @@ a, [ui-sref] {
     .button-group > li.warning > a:hover, .button-group > li.warning > a:focus, .button-group > li.warning > label:hover, .button-group > li.warning > label:focus, .button-group > li.warning > button:hover, .button-group > li.warning > button:focus {
       background: #dc750f;
       color: #fff; }
-    .button-group > li.warning > a[data-popup-toggle]::after, .button-group > li.warning > label[data-popup-toggle]::after, .button-group > li.warning > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group > li.warning > a:hover, .button-group > li.warning > a:focus, .button-group > li.warning > label:hover, .button-group > li.warning > label:focus, .button-group > li.warning > button:hover, .button-group > li.warning > button:focus {
       border-color: #c2670d; }
     .button-group > li.warning > a .iconic *, .button-group > li.warning > label .iconic *, .button-group > li.warning > button .iconic * {
@@ -1412,8 +1370,6 @@ a, [ui-sref] {
     .button-group > li.alert > a:hover, .button-group > li.alert > a:focus, .button-group > li.alert > label:hover, .button-group > li.alert > label:focus, .button-group > li.alert > button:hover, .button-group > li.alert > button:focus {
       background: #dc2c0f;
       color: #fff; }
-    .button-group > li.alert > a[data-popup-toggle]::after, .button-group > li.alert > label[data-popup-toggle]::after, .button-group > li.alert > button[data-popup-toggle]::after {
-      border-top-color: #fff; }
     .button-group > li.alert > a:hover, .button-group > li.alert > a:focus, .button-group > li.alert > label:hover, .button-group > li.alert > label:focus, .button-group > li.alert > button:hover, .button-group > li.alert > button:focus {
       border-color: #c2270d; }
     .button-group > li.alert > a .iconic *, .button-group > li.alert > label .iconic *, .button-group > li.alert > button .iconic * {
@@ -1573,6 +1529,7 @@ a, [ui-sref] {
               flex: 1; }
       .button-group.expand > li > a, .button-group.expand > li > label, .button-group.expand > li > button {
         display: block;
+        width: 100%;
         margin-left: 0;
         margin-right: 0; }
   .button-group li.disabled > a, .button-group li.disabled > label, .button-group li.disabled > button {
@@ -1746,6 +1703,11 @@ ul.thumbnails > li {
   label > [type="text"], label > input[type="password"], label > input[type="date"], label > input[type="datetime"], label > input[type="datetime-local"], label > input[type="month"], label > input[type="week"], label > input[type="email"], label > input[type="number"], label > input[type="search"], label > input[type="tel"], label > input[type="time"], label > input[type="url"], label > input[type="color"], label > textarea {
     margin-top: 0.5rem; }
 
+input.disabled, input[disabled], input[readonly], fieldset[disabled] input {
+  cursor: not-allowed; }
+  input.disabled, input.disabled:hover, input[disabled], input[disabled]:hover, input[readonly], input[readonly]:hover, fieldset[disabled] input, fieldset[disabled] input:hover {
+    background-color: #f2f2f2; }
+
 label {
   display: block;
   font-size: 0.9rem;
@@ -1843,45 +1805,56 @@ select {
     background-color: #f0f0f0; }
   select:focus {
     outline: 0; }
+  select::-ms-expand {
+    display: none; }
 
 input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   display: block;
   width: 100%;
-  height: 1rem;
-  background: #ddd;
+  height: auto;
   cursor: pointer;
-  overflow: visible;
   margin-top: 0.25rem;
-  margin-bottom: 0.25rem; }
+  margin-bottom: 0.25rem;
+  border: 0;
+  line-height: 1; }
   input[type="range"]:focus {
     outline: 0; }
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 1rem;
+    background: #ddd; }
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: white;
     width: 1.5rem;
-    height: 1.5rem; }
+    height: 1.5rem;
+    margin-top: -0.25rem; }
   input[type="range"]::-moz-range-track {
     -moz-appearance: none;
-    max-width: 300px;
-    height: 4px;
-    background: #ccc;
-    cursor: pointer; }
+    height: 1rem;
+    background: #ccc; }
   input[type="range"]::-moz-range-thumb {
     -moz-appearance: none;
     background: white;
     width: 1.5rem;
-    height: 1.5rem; }
+    height: 1.5rem;
+    margin-top: -0.25rem; }
   input[type="range"]::-ms-track {
-    max-width: 300px;
-    height: 4px;
-    background: #ccc;
-    cursor: pointer; }
+    height: 1rem;
+    background: #ddd;
+    color: transparent;
+    border: 0;
+    overflow: visible;
+    border-top: 0.25rem solid #fff;
+    border-bottom: 0.25rem solid #fff; }
   input[type="range"]::-ms-thumb {
     background: white;
     width: 1.5rem;
-    height: 1.5rem; }
+    height: 1.5rem;
+    border: 0; }
+  input[type="range"]::-ms-fill-lower, input[type="range"]::-ms-fill-upper {
+    background: #ddd; }
 
 output {
   line-height: 1.5rem;
@@ -2046,7 +2019,7 @@ meter {
   position: fixed; }
 
 /*
-	THE GRID
+  THE GRID
   --------
 
   Foundation's magical, flexbox-powered grid.
@@ -2164,104 +2137,87 @@ meter {
   @output Resets to transform, position, and a few visual styles.
 */
 /*
-	Frames are containers that stretch to the full dimmensions of the browser window.
+  Frames are containers that stretch to the full dimmensions of the browser window.
 */
 /*
-	Groups are collections of content items. They're the "rows" of Foundation for Apps.
+  Groups are collections of content items. They're the "rows" of Foundation for Apps.
 */
 /*
-	Blocks are containers for actual content. They're the "columns" of Foundation for Apps.
+  Blocks are containers for actual content. They're the "columns" of Foundation for Apps.
 */
-/*
-	CSS Output
-*/
-/*
-  Shared styles for frames and blocks (parent elements)
-*/
-.grid-frame, .grid-block, .small-grid-block, .medium-grid-block, .large-grid-block {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
-  .vertical.grid-frame, .vertical.grid-block, .vertical.small-grid-block, .vertical.medium-grid-block, .vertical.large-grid-block {
+.vertical.grid-frame, .vertical.grid-block, .vertical.small-grid-block, .vertical.medium-grid-block, .vertical.large-grid-block {
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+.small-vertical.grid-frame, .small-vertical.grid-block, .small-vertical.small-grid-block, .small-vertical.medium-grid-block, .small-vertical.large-grid-block {
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+.small-horizontal.grid-frame, .small-horizontal.grid-block, .small-horizontal.small-grid-block, .small-horizontal.medium-grid-block, .small-horizontal.large-grid-block {
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+@media only screen and (min-width: 40em) {
+  .medium-vertical.grid-frame, .medium-vertical.grid-block, .medium-vertical.small-grid-block, .medium-vertical.medium-grid-block, .medium-vertical.large-grid-block {
     -webkit-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .small-vertical.grid-frame, .small-vertical.grid-block, .small-vertical.small-grid-block, .small-vertical.medium-grid-block, .small-vertical.large-grid-block {
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch; }
-  .small-horizontal.grid-frame, .small-horizontal.grid-block, .small-horizontal.small-grid-block, .small-horizontal.medium-grid-block, .small-horizontal.large-grid-block {
+  .medium-horizontal.grid-frame, .medium-horizontal.grid-block, .medium-horizontal.small-grid-block, .medium-horizontal.medium-grid-block, .medium-horizontal.large-grid-block {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
-  @media only screen and (min-width: 40em) {
-    .medium-vertical.grid-frame, .medium-vertical.grid-block, .medium-vertical.small-grid-block, .medium-vertical.medium-grid-block, .medium-vertical.large-grid-block {
-      -webkit-flex-flow: column nowrap;
-          -ms-flex-flow: column nowrap;
-              flex-flow: column nowrap;
-      -webkit-align-items: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch; }
-    .medium-horizontal.grid-frame, .medium-horizontal.grid-block, .medium-horizontal.small-grid-block, .medium-horizontal.medium-grid-block, .medium-horizontal.large-grid-block {
-      -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap; } }
-  @media only screen and (min-width: 75em) {
-    .large-vertical.grid-frame, .large-vertical.grid-block, .large-vertical.small-grid-block, .large-vertical.medium-grid-block, .large-vertical.large-grid-block {
-      -webkit-flex-flow: column nowrap;
-          -ms-flex-flow: column nowrap;
-              flex-flow: column nowrap;
-      -webkit-align-items: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch; }
-    .large-horizontal.grid-frame, .large-horizontal.grid-block, .large-horizontal.small-grid-block, .large-horizontal.medium-grid-block, .large-horizontal.large-grid-block {
-      -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap; } }
-  .align-right.grid-frame, .align-right.grid-block, .align-right.small-grid-block, .align-right.medium-grid-block, .align-right.large-grid-block {
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-  .align-center.grid-frame, .align-center.grid-block, .align-center.small-grid-block, .align-center.medium-grid-block, .align-center.large-grid-block {
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .align-justify.grid-frame, .align-justify.grid-block, .align-justify.small-grid-block, .align-justify.medium-grid-block, .align-justify.large-grid-block {
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .align-spaced.grid-frame, .align-spaced.grid-block, .align-spaced.small-grid-block, .align-spaced.medium-grid-block, .align-spaced.large-grid-block {
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around; }
-  .wrap.grid-frame, .wrap.grid-block, .wrap.small-grid-block, .wrap.medium-grid-block, .wrap.large-grid-block {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
+            flex-flow: row wrap; } }
+@media only screen and (min-width: 75em) {
+  .large-vertical.grid-frame, .large-vertical.grid-block, .large-vertical.small-grid-block, .large-vertical.medium-grid-block, .large-vertical.large-grid-block {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .large-horizontal.grid-frame, .large-horizontal.grid-block, .large-horizontal.small-grid-block, .large-horizontal.medium-grid-block, .large-horizontal.large-grid-block {
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; } }
+.align-right.grid-frame, .align-right.grid-block, .align-right.small-grid-block, .align-right.medium-grid-block, .align-right.large-grid-block {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+.align-center.grid-frame, .align-center.grid-block, .align-center.small-grid-block, .align-center.medium-grid-block, .align-center.large-grid-block {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+.align-justify.grid-frame, .align-justify.grid-block, .align-justify.small-grid-block, .align-justify.medium-grid-block, .align-justify.large-grid-block {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+.align-spaced.grid-frame, .align-spaced.grid-block, .align-spaced.small-grid-block, .align-spaced.medium-grid-block, .align-spaced.large-grid-block {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+.wrap.grid-frame, .wrap.grid-block, .wrap.small-grid-block, .wrap.medium-grid-block, .wrap.large-grid-block {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
-/*
-  Shared styles for blocks and content blocks (child elements)
-*/
 .shrink.grid-block, .shrink.grid-content, .shrink.small-grid-block, .shrink.small-grid-content, .shrink.medium-grid-block, .shrink.medium-grid-content, .shrink.large-grid-block, .shrink.large-grid-content {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
+.noscroll.grid-block, .noscroll.grid-content, .noscroll.small-grid-block, .noscroll.small-grid-content, .noscroll.medium-grid-block, .noscroll.medium-grid-content, .noscroll.large-grid-block, .noscroll.large-grid-content {
+  overflow: hidden; }
 
-/*
-  The core grid elements:
-   - Frame
-   - Block
-   - Content block
-   - Container
-*/
 .grid-frame {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2269,6 +2225,8 @@ meter {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2295,6 +2253,8 @@ meter {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2317,9 +2277,6 @@ meter {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
-  .grid-content .grid-block {
-    margin-left: -1rem;
-    margin-right: -1rem; }
 
 .grid-content {
   display: block;
@@ -2332,6 +2289,22 @@ meter {
           flex: 1 1 auto; }
   .grid-content.collapse {
     padding: 0; }
+  .grid-content .grid-block {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    overflow: visible; }
+    .grid-content .grid-block.nowrap {
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; }
+    .grid-content .grid-block .grid-content {
+      overflow: visible; }
 
 .grid-container {
   max-width: 56.25rem;
@@ -2343,9 +2316,6 @@ meter {
     max-width: 56.25rem;
     margin: 0 0 0 auto; }
 
-/*
-  Breakpoint classes for blocks
-*/
 .small-grid-block {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2353,6 +2323,8 @@ meter {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2420,6 +2392,8 @@ meter {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -2488,6 +2462,8 @@ meter {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -2548,9 +2524,6 @@ meter {
       bottom: auto;
       left: auto; } }
 
-/*
-  Sizing and ordering classes
-*/
 .order-1 {
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -3547,14 +3520,6 @@ meter {
       -webkit-flex: 0 0 8.33333%;
           -ms-flex: 0 0 8.33333%;
               flex: 0 0 8.33333%; } }
-.grid-content .grid-block {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  overflow: visible; }
-  .grid-content .grid-block .grid-content {
-    overflow: visible; }
-
 .grid-content .modal .grid-block {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -4528,7 +4493,7 @@ meter {
 /*
   Transitions
 */
-.slideInDown.ng-enter {
+.slideInDown.ng-enter, .slideInDown.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4538,11 +4503,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%); }
-.slideInDown.ng-enter.ng-enter-active {
+.slideInDown.ng-enter.ng-enter-active, .slideInDown.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInLeft.ng-enter {
+.slideInLeft.ng-enter, .slideInLeft.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4552,11 +4517,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(100%);
           transform: translateX(100%); }
-.slideInLeft.ng-enter.ng-enter-active {
+.slideInLeft.ng-enter.ng-enter-active, .slideInLeft.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInUp.ng-enter {
+.slideInUp.ng-enter, .slideInUp.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4566,11 +4531,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateY(100%);
           transform: translateY(100%); }
-.slideInUp.ng-enter.ng-enter-active {
+.slideInUp.ng-enter.ng-enter-active, .slideInUp.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInRight.ng-enter {
+.slideInRight.ng-enter, .slideInRight.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4580,11 +4545,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%); }
-.slideInRight.ng-enter.ng-enter-active {
+.slideInRight.ng-enter.ng-enter-active, .slideInRight.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutBottom.ng-leave {
+.slideOutBottom.ng-leave, .slideOutBottom.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4594,11 +4559,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutBottom.ng-leave.ng-leave-active {
+.slideOutBottom.ng-leave.ng-leave-active, .slideOutBottom.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateY(100%);
           transform: translateY(100%); }
 
-.slideOutRight.ng-leave {
+.slideOutRight.ng-leave, .slideOutRight.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4608,11 +4573,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutRight.ng-leave.ng-leave-active {
+.slideOutRight.ng-leave.ng-leave-active, .slideOutRight.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateX(100%);
           transform: translateX(100%); }
 
-.slideOutUp.ng-leave {
+.slideOutUp.ng-leave, .slideOutUp.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4622,11 +4587,11 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutUp.ng-leave.ng-leave-active {
+.slideOutUp.ng-leave.ng-leave-active, .slideOutUp.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%); }
 
-.slideOutLeft.ng-leave {
+.slideOutLeft.ng-leave, .slideOutLeft.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4636,29 +4601,29 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutLeft.ng-leave.ng-leave-active {
+.slideOutLeft.ng-leave.ng-leave-active, .slideOutLeft.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%); }
 
-.fadeIn.ng-enter {
+.fadeIn.ng-enter, .fadeIn.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
   transition-property: opacity;
   opacity: 0; }
-.fadeIn.ng-enter.ng-enter-active {
+.fadeIn.ng-enter.ng-enter-active, .fadeIn.ng-hide-remove.ng-hide-remove-active {
   opacity: 1; }
 
-.fadeOut.ng-leave {
+.fadeOut.ng-leave, .fadeOut.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
   transition-property: opacity;
   opacity: 1; }
-.fadeOut.ng-leave.ng-leave-active {
+.fadeOut.ng-leave.ng-leave-active, .fadeOut.ng-hide-add.ng-hide-add-active {
   opacity: 0; }
 
-.hingeInFromTop.ng-enter {
+.hingeInFromTop.ng-enter, .hingeInFromTop.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4669,12 +4634,12 @@ meter {
   -webkit-transform-origin: top;
           transform-origin: top;
   opacity: 0; }
-.hingeInFromTop.ng-enter.ng-enter-active {
+.hingeInFromTop.ng-enter.ng-enter-active, .hingeInFromTop.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromRight.ng-enter {
+.hingeInFromRight.ng-enter, .hingeInFromRight.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4685,12 +4650,12 @@ meter {
   -webkit-transform-origin: right;
           transform-origin: right;
   opacity: 0; }
-.hingeInFromRight.ng-enter.ng-enter-active {
+.hingeInFromRight.ng-enter.ng-enter-active, .hingeInFromRight.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromBottom.ng-enter {
+.hingeInFromBottom.ng-enter, .hingeInFromBottom.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4701,12 +4666,12 @@ meter {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   opacity: 0; }
-.hingeInFromBottom.ng-enter.ng-enter-active {
+.hingeInFromBottom.ng-enter.ng-enter-active, .hingeInFromBottom.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromLeft.ng-enter {
+.hingeInFromLeft.ng-enter, .hingeInFromLeft.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4717,12 +4682,12 @@ meter {
   -webkit-transform-origin: left;
           transform-origin: left;
   opacity: 0; }
-.hingeInFromLeft.ng-enter.ng-enter-active {
+.hingeInFromLeft.ng-enter.ng-enter-active, .hingeInFromLeft.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromMiddleX.ng-enter {
+.hingeInFromMiddleX.ng-enter, .hingeInFromMiddleX.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4733,12 +4698,12 @@ meter {
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 0; }
-.hingeInFromMiddleX.ng-enter.ng-enter-active {
+.hingeInFromMiddleX.ng-enter.ng-enter-active, .hingeInFromMiddleX.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromMiddleY.ng-enter {
+.hingeInFromMiddleY.ng-enter, .hingeInFromMiddleY.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4749,12 +4714,12 @@ meter {
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 0; }
-.hingeInFromMiddleY.ng-enter.ng-enter-active {
+.hingeInFromMiddleY.ng-enter.ng-enter-active, .hingeInFromMiddleY.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeOutFromTop.ng-leave {
+.hingeOutFromTop.ng-leave, .hingeOutFromTop.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4765,12 +4730,12 @@ meter {
   -webkit-transform-origin: top;
           transform-origin: top;
   opacity: 1; }
-.hingeOutFromTop.ng-leave.ng-leave-active {
+.hingeOutFromTop.ng-leave.ng-leave-active, .hingeOutFromTop.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   opacity: 0; }
 
-.hingeOutFromRight.ng-leave {
+.hingeOutFromRight.ng-leave, .hingeOutFromRight.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4781,12 +4746,12 @@ meter {
   -webkit-transform-origin: right;
           transform-origin: right;
   opacity: 1; }
-.hingeOutFromRight.ng-leave.ng-leave-active {
+.hingeOutFromRight.ng-leave.ng-leave-active, .hingeOutFromRight.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   opacity: 0; }
 
-.hingeOutFromBottom.ng-leave {
+.hingeOutFromBottom.ng-leave, .hingeOutFromBottom.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4797,12 +4762,12 @@ meter {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   opacity: 1; }
-.hingeOutFromBottom.ng-leave.ng-leave-active {
+.hingeOutFromBottom.ng-leave.ng-leave-active, .hingeOutFromBottom.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(90deg);
           transform: perspective(2000px) rotateX(90deg);
   opacity: 0; }
 
-.hingeOutFromLeft.ng-leave {
+.hingeOutFromLeft.ng-leave, .hingeOutFromLeft.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4813,12 +4778,12 @@ meter {
   -webkit-transform-origin: left;
           transform-origin: left;
   opacity: 1; }
-.hingeOutFromLeft.ng-leave.ng-leave-active {
+.hingeOutFromLeft.ng-leave.ng-leave-active, .hingeOutFromLeft.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(90deg);
           transform: perspective(2000px) rotateY(90deg);
   opacity: 0; }
 
-.hingeOutFromMiddleX.ng-leave {
+.hingeOutFromMiddleX.ng-leave, .hingeOutFromMiddleX.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4829,12 +4794,12 @@ meter {
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 1; }
-.hingeOutFromMiddleX.ng-leave.ng-leave-active {
+.hingeOutFromMiddleX.ng-leave.ng-leave-active, .hingeOutFromMiddleX.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   opacity: 0; }
 
-.hingeOutFromMiddleY.ng-leave {
+.hingeOutFromMiddleY.ng-leave, .hingeOutFromMiddleY.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4845,12 +4810,12 @@ meter {
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 1; }
-.hingeOutFromMiddleY.ng-leave.ng-leave-active {
+.hingeOutFromMiddleY.ng-leave.ng-leave-active, .hingeOutFromMiddleY.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   opacity: 0; }
 
-.zoomIn.ng-enter {
+.zoomIn.ng-enter, .zoomIn.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4859,12 +4824,12 @@ meter {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   opacity: 0; }
-.zoomIn.ng-enter.ng-enter-active {
+.zoomIn.ng-enter.ng-enter-active, .zoomIn.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1; }
 
-.zoomOut.ng-leave {
+.zoomOut.ng-leave, .zoomOut.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4873,51 +4838,51 @@ meter {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   opacity: 1; }
-.zoomOut.ng-leave.ng-leave-active {
+.zoomOut.ng-leave.ng-leave-active, .zoomOut.ng-hide-add.ng-hide-add-active {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 0; }
 
-.spinIn.ng-enter {
+.spinIn.ng-enter, .spinIn.ng-hide-remove {
   transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transform: rotate(-270deg);
           transform: rotate(-270deg);
   opacity: 0; }
-.spinIn.ng-enter.ng-enter-active {
+.spinIn.ng-enter.ng-enter-active, .spinIn.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOut.ng-leave {
+.spinOut.ng-leave, .spinOut.ng-hide-add {
   transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
-.spinOut.ng-leave.ng-leave-active {
+.spinOut.ng-leave.ng-leave-active, .spinOut.ng-hide-add.ng-hide-add-active {
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
   opacity: 0; }
 
-.spinInCCW.ng-enter {
+.spinInCCW.ng-enter, .spinInCCW.ng-hide-remove {
   transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
   opacity: 0; }
-.spinInCCW.ng-enter.ng-enter-active {
+.spinInCCW.ng-enter.ng-enter-active, .spinInCCW.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOutCCW.ng-leave {
+.spinOutCCW.ng-leave, .spinOutCCW.ng-hide-add {
   transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
-.spinOutCCW.ng-leave.ng-leave-active {
+.spinOutCCW.ng-leave.ng-leave-active, .spinOutCCW.ng-hide-add.ng-hide-add-active {
   -webkit-transform: rotate(-270deg);
           transform: rotate(-270deg);
   opacity: 0; }
@@ -5114,6 +5079,20 @@ meter {
   transition-delay: 150ms;
   transition-duration: 0; }
 
+.position-absolute {
+  overflow: hidden;
+  position: relative; }
+
+.ui-animation.ng-enter-active, .ui-animation.ng-leave-active {
+  position: absolute !important;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
 /*
   NOTIFICATION
   ------------
@@ -5259,6 +5238,30 @@ meter {
         left: 1rem;
         right: 1rem;
         margin-left: 0; } }
+  .static-notification.success {
+    background: #43AC6A;
+    padding: 1rem;
+    border-radius: 4px; }
+    .static-notification.success, .static-notification.success h1, .static-notification.success h2, .static-notification.success h3, .static-notification.success h4, .static-notification.success h5, .static-notification.success h6 {
+      color: white; }
+  .static-notification.warning {
+    background: #F08A24;
+    padding: 1rem;
+    border-radius: 4px; }
+    .static-notification.warning, .static-notification.warning h1, .static-notification.warning h2, .static-notification.warning h3, .static-notification.warning h4, .static-notification.warning h5, .static-notification.warning h6 {
+      color: white; }
+  .static-notification.alert {
+    background: #F04124;
+    padding: 1rem;
+    border-radius: 4px; }
+    .static-notification.alert, .static-notification.alert h1, .static-notification.alert h2, .static-notification.alert h3, .static-notification.alert h4, .static-notification.alert h5, .static-notification.alert h6 {
+      color: white; }
+  .static-notification.dark {
+    background: #232323;
+    padding: 1rem;
+    border-radius: 4px; }
+    .static-notification.dark, .static-notification.dark h1, .static-notification.dark h2, .static-notification.dark h3, .static-notification.dark h4, .static-notification.dark h5, .static-notification.dark h6 {
+      color: #fff; }
 
 .notification-container {
   width: 25rem;
@@ -5361,7 +5364,7 @@ meter {
 */
 .off-canvas {
   position: fixed;
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
@@ -6512,8 +6515,6 @@ p.left, section.left {
   .custom-button:hover, .custom-button:focus {
     background: #798b03;
     color: white; }
-  .custom-button[data-popup-toggle]::after {
-    border-top-color: white; }
   .custom-button .iconic * {
     fill: white;
     stroke: white; }

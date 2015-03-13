@@ -6,34 +6,33 @@ url: /
 <div class="grid-frame">
 	<div class="grid-content">
 		<div class="grid-container" ng-controller="FramilyController as framily">
-		<div class="grid-block small-up-1 medium-up-1 large-up-1" ng-repeat="post in framily.posts">
-			<div class="grid-content">
-			    <div class="card">
-			    	<img class="content" ng-src="{{post.images.content}}" />
-			    	<div class="custom-card-divider">
-			    	{{post.name}}, {{post.date}}
-			    	</div>
-			    <div class="card-section">
-			    	<img class="profile" ng-src="{{post.images.profile}}" alt="">
-				    <h4>Name of Song</h4>
-				    <p>{{post.description}}</p>
-				    <!-- new code -->
-				    
-				    <!-- end of new code -->
-				    <a zf-open="{{post.id}}" class="button"><img zf-iconic="" icon="share-boxed" size="medium"></a>
-					<div zf-modal="" id="{{post.id}}">
-						<a zf-close="" class="close-button">×</a>
-						<img class="" ng-src="{{post.images.content}}" />
-						<img class="profile" ng-src="{{post.images.profile}}" alt="">
-						<h3>{{post.name}},{{post.date}}</h3>
-						<p>{{post.description}}</p>
-
-					</div>
-			    </div>   
-		    	</div>
-		  	</div>
+			<div class="grid-block small-up-1 medium-up-1 large-up-1" ng-repeat="post in framily.posts">
+				<div class="grid-content">
+			    	<div class="card">
+				    	<img class="content" ng-src="{{post.images.content}}" />
+				    	<div class="custom-card-divider">
+				    	{{post.name}}, {{post.date}}
+				    	</div>
+			    		<div class="card-section">
+				    		<img class="profile" ng-src="{{post.images.profile}}" alt="">
+					    	<h4>Name of Song</h4>
+					    	<p>{{post.description}}</p>
+					    <!-- new code -->
+					    
+					    <!-- end of new code -->
+					    	<a zf-open="{{post.id}}" class="button"><img zf-iconic="" icon="share-boxed" size="medium"></a>
+							<div zf-modal="" id="{{post.id}}">
+								<a zf-close="" class="close-button">×</a>
+								<img class="" ng-src="{{post.images.content}}" />
+								<img class="profile" ng-src="{{post.images.profile}}" alt="">
+								<h3>{{post.name}},{{post.date}}</h3>
+								<p>{{post.description}}</p>
+							</div>
+			    		</div>   
+		    		</div>
+		  		</div>
+			</div>
 		</div>
-	</div>
 
 	</div>
 	<div class="grid-content">
