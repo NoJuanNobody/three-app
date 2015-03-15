@@ -12,6 +12,9 @@ You'll need the following software installed to get started.
   * [Ruby](https://www.ruby-lang.org/en/): Use the installer for your OS. For Windows users, [JRuby](http://jruby.org/) is a popular alternative.
     * With Ruby installed, run `gem install bundler sass`.
   * [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `[sudo] npm install -g gulp bower`
+-= OSX install bundler =-
+gem install bundler
+bundle install
 
 ## Get Started
 
