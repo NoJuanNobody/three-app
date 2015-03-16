@@ -1,53 +1,48 @@
-# Foundation for Apps Template
+Andrew's Branch, Any Backend person can, and is encouraged to look at this. 
+Please checkout the readme.md from master before merging this branch!!!!
 
-This is the default template project for Foundation for Apps. It's powered by Node, Gulp, Angular, and libsass. It provides you with a basic template to get started with Angular and Foundation for Apps. If you're already an Angular developer, you may instead want to install the components into your own stack using Bower: `bower install foundation-apps`
 
-## Requirements
+First,   We need to be implementing Web 2.0.
+This means we will be using servlets
+     1.)  discus the use of Node.js or PHP
+     	  a.) Node js is not eff use of CPU
+	  b.) Node has issues with scalability
+	  c.) Node works off Listeners  AMAZING!!!!
+     2.)  Setting up of servlets
+     	  a.)  News
+	       The news companies use RSS feeds.  We will have to use jquery / java script + ajax to get the feed and then organize it how we would like to display it on the Three page. This can be done and stored front end in a javascript array. Preloaded the RSS feed data then cacheing images after the rest of the page loads for faster responce time.  <-- just an idea
+               CNN  has a good solid RSS   http://edition.cnn.com/services/rss/
 
-You'll need the following software installed to get started.
+	  b.)  Social
+	       1a.) Twitter feeds  
+	       2a.) Facebook feeds
+	       3a.) Imgur feeds
+	       4a.) Vines
+	       5a.) Reddit
+	       6a.) RenRen
+	       	    Most social networkign sites have API's / restful services that you can capture data from after getting keys.  As soon as money is involved they cost,  otehrwise most are free.  (unless they are unavalable, ie Facebook is not allowing more feeds) 
 
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Git](http://git-scm.com/downloads): Use the installer for your OS.
-    * Windows users can also try [Git for Windows](http://git-for-windows.github.io/).
-  * [Ruby](https://www.ruby-lang.org/en/): Use the installer for your OS. For Windows users, [JRuby](http://jruby.org/) is a popular alternative.
-    * With Ruby installed, run `gem install bundler sass`.
-  * [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `[sudo] npm install -g gulp bower`
--= OSX install bundler =-
-gem install bundler
-bundle install
+          c.)  Int
+	       1a.)  <-- this is a broad field.  Up for more discussion. 
+Ideas ->  Games, Movies/reviews, Food, Hot chicks, funny shit (maybe vines), kittens, beer, and titties (maybe not titties)
 
-## Get Started
+      3.)  Database setup
+      	   MySQL is a free database that we can set up and use till we need to liscense it.   I am having issues with setting up the database because of host setup issues.   Anyway i can help people set up a database if they would like. but hopefully i will have it done soon.  The database will be used to store comments that are local to our site otherwise the comments will be posted directly to the host's page.
 
-Clone this repository, where `app` is the name of your app.
+      4.)  custom UI/UX  <--- this is something maybe new,   But depending what we what to happen with the user interface we can make a click an drag of a window / post remove it from the screen and be replaced by a new feed from the side / top / bottom / outerspace. 
 
-```bash
-git clone https://github.com/zurb/foundation-apps-template.git app
-```
+We may beable to piggy back off of a jquery custom UI package for some ideas.  
 
-Change into the directory.
 
-```bash
-cd app
-```
 
-Install the dependencies. Running `npm install` will also automatically run `bower install` after. If you're running Mac OS or Linux, you may need to run `sudo npm install` instead, depending on how your machine is configured. Running `bundle` will install the correct version of Sass for the template.
 
-```bash
-npm install
-bower install
-bundle
-```
+-------------------------------------------------------------------------
+=========================================================================
 
-While you're working on your project, run:
+I am willing to work on anything with anyone.  We all need to talk. I know Jeree has no clue how software engineering is done but it should be our job to familurize him with some sort of methods (agile, waterfal, whatever) so we can get the information we need to create a solid product.   (i would prefer the agile method with 2 or 3 'stand-ups' a week) 
 
-```bash
-npm start
-```
+Also  i would love for code reviews, to read and share ideas within code is huge. I hope to learn from every person on this project. This is something we can dicuss.  because it takes more effort and time, but over all it will make us all better programers and it will familureize each person with the code.
 
-This will compile the Sass and assemble your Angular app. **Now go to `localhost:8080` in your browser to see it in action.**
+I am a bit out-spoken,  I say what is on my mind and i am the type of person that can get in a huge argument and be in a total rage with and then go out for beers right after.  That being said,  I would like people to be blunt with me and also voice any issues they may have with my 'colorful vocabulary'.  
 
-To run the compiling process once, without watching any files:
-
-```bash
-npm start build
-```
+Lastly I am not going to spell check write-ups like this,  1 because i will most likely bring it up in meetings and 2 because i am dislexic and i will be correcting bullshit till im blue in the face.    If someone reads this and needs clarification feel free to ask me.    
